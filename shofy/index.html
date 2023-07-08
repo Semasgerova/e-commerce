@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shofy</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container d-md-flex justify-content-between d-none">
+          <div class="left d-flex align-items-center">
+            <i class="fa-solid fa-truck"></i>
+            <p class="m-0 ps-2">FREE Express Shipping On Orders $570+</p>
+          </div>
+          <div class="right d-flex">
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                English <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                <li><a class="dropdown-item" href="#">Russian</a></li>
+                <li><a class="dropdown-item" href="#">Portuguese</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                USD <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">EUR</a></li>
+                <li><a class="dropdown-item" href="#">CHF</a></li>
+                <li><a class="dropdown-item" href="#">GBP</a></li>
+                <li><a class="dropdown-item" href="#">KWD</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Setting <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                <li><a class="dropdown-item" href="#">Cart</a></li>
+                <li><a class="dropdown-item" href="#">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-middle py-4 d-lg-flex d-none">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="search d-flex align-items-center h-100">
+                <form class="search-form">
+                  <div class="form-group d-flex align-items-center">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search for Products..."
+                    />
+                    <select class="form-control">
+                      <option value="">Select Category</option>
+                      <option value="">Electronics</option>
+                      <option value="">Fashion</option>
+                      <option value="">Beauty</option>
+                      <option value="">Jewelery</option>
+                    </select>
+                    <button class="btn">
+                      <i class="fa-solid fa-search"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box d-flex justify-content-end">
+                <div class="carts d-flex justify-content-between">
+                  <div class="login d-flex align-items-center">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="m-0 ps-3">
+                      <span>Hello</span>, <br />
+                      Sign in
+                    </p>
+                  </div>
+                  <div class="info d-flex align-items-center">
+                    <div class="arrow">
+                      <i class="fa-solid fa-right-left"></i>
+                    </div>
+                    <div class="heart">
+                      <i class="fa-regular fa-heart"></i>
+                      <span>0</span>
+                    </div>
+                    <div class="shopping-bag">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-middle-canvas py-4 d-flex d-lg-none">
+        <div class="container">
+          <div class="menu w-100 d-flex justify-content-between">
+            <div class="left">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="right d-flex align-items-center">
+              <div class="shopping-bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span></span>
+              </div>
+              <div class="canvas">
+                <button
+                  class="btn border-0"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                >
+                <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div
+                  class="offcanvas offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
+                  <div class="offcanvas-header">
+                    <img
+                  src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                  alt=""
+                />
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <nav>
+                      <ul>
+                        <li class="d-flex justify-content-between">
+                          <a href="">Home</a><i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                          <a href=""
+                            >Products 
+                          </a><i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                          <a href="">Shop </a><i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li><a href="">Coupons</a></li>
+                        <li class="d-flex justify-content-between">
+                          <a href="">Blog</a> <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li><a href="">Contact</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom d-lg-flex d-none">
+        <div class="container">
+          <div class="row p-0 d-flex align-items-center">
+            <div class="col-lg-3 p-0 h-100">
+              <div class="dropdown h-100">
+                <button
+                  class="btn dropdown-toggle w-100"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <div class="container d-flex justify-content-between">
+                    <div class="left">
+                      <i class="fa-solid fa-bars-staggered"></i> All Departments
+                    </div>
+                    <div class="right">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#"><div class="left"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FxHFpQTV%2Fproduct-cat-2.png&w=64&q=75" height="30" alt=""> Mobile Tablets</div><div class="right"><i class="fa-solid fa-chevron-right"></i></div></a>
+                    <ul class="submenu">
+                      <li><a class="cursor-pointer">Samsung</a></li>
+                      <li>
+                        <a class="cursor-pointer">Apple</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#"><div class="left"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FD9qfYWX%2Fproduct-cat-5.png&w=64&q=75" height="30" alt=""> Bluetooth</div><div class="right"><i class="fa-solid fa-chevron-right"></i></div></a>
+                    <ul class="submenu">
+                      <li><a class="cursor-pointer">Wireless Bluetooth</a></li>
+                      <li>
+                        <a class="cursor-pointer">Sports Bluetooth</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#"><div class="left"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FS0GjZdp%2Fproduct-cat-3.png&w=64&q=75" height="30" alt=""> CPU Heat Pipes</div><div class="right"><i class="fa-solid fa-chevron-right"></i></div></a>
+                    <ul class="submenu">
+                      <li><a class="cursor-pointer">CPU Cooler</a></li>
+                      <li>
+                        <a class="cursor-pointer">Air CPU Cooler</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#"><div class="left"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FsVxYFDY%2Fproduct-cat-1.png&w=64&q=75" height="30" alt=""> Headphones</div><div class="right"><i class="fa-solid fa-chevron-right"></i></div></a>
+                    <ul class="submenu">
+                      <li><a class="cursor-pointer">Kids Headphones</a></li>
+                      <li>
+                        <a class="cursor-pointer">Bluetooth Headphones</a>
+                      </li>
+                      <li><a class="cursor-pointer">On-Ear Headphones</a></li>
+                    </ul>
+                   
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#"><div class="left"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fg3YK8H2%2Fproduct-cat-4.png&w=64&q=75" height="30" alt=""> Smart Watch</div><div class="right"><i class="fa-solid fa-chevron-right"></i></div></a>
+                    <ul class="submenu">
+                      <li><a class="cursor-pointer">Sports Smart Watch</a></li>
+                      <li>
+                        <a class="cursor-pointer">Apple Watch</a>
+                      </li>
+                      <li>
+                        <a class="cursor-pointer">Fitness Smart Watch</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <nav class="w-100 h-100">
+                <ul
+                  class="h-100 d-flex justify-content-between align-items-center m-0"
+                >
+                  <li>
+                    <a href="">Home <i class="fa-solid fa-chevron-down"></i></a>
+                  </li>
+                  <li>
+                    <a href=""
+                      >Products <i class="fa-solid fa-chevron-down"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="">Shop <i class="fa-solid fa-chevron-down"></i></a>
+                  </li>
+                  <li><a href="">Coupons</a></li>
+                  <li>
+                    <a href="">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                  </li>
+                  <li><a href="">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-4">
+              <div
+                class="telephone d-flex justify-content-end align-items-center"
+              >
+                <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <div class="text ms-3">
+                  <p>
+                    <span>Hotline:</span> <br />
+                    +(402) 763 282 46
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="slider">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner d-flex align-items-center">
+              <div class="imageOne"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-shape-1.d01cef27.png&w=640&q=75" alt=""></div>
+              <div class="imageTwo"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-shape-3.7f9eb300.png&w=48&q=75" alt=""></div>
+              <div class="imageThree"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-shape-4.8b86d1e8.png&w=48&q=75" alt=""></div>
+              <div class="imageFour"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-shape-2.c89e4dd2.png&w=48&q=75" alt=""></div>
+              <div class="carousel-item active py-5">
+               <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="txt">
+                            <p>Starting at <b>$Starting at</b></p>
+                            <h3>The best tablet Collection 2023</h3>
+                            <p class="text">Exclusive offer <span>35</span> off this week</p>
+                            <button class="btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 "> 
+                        <div class="img w-100 h-100 d-flex justify-content-end">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-img-1.558c04de.png&w=640&q=75">
+                        </div>
+                    </div>
+                </div>
+               </div>
+              </div>
+              <div class="carousel-item py-5">
+               <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="txt">
+                            <p>Starting at <b>$Starting at</b></p>
+                            <h3>The best note book Collection 2023</h3>
+                            <p class="text">Exclusive offer <span>-10</span> off this week</p>
+                            <button class="btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12"> 
+                        <div class="img w-100 h-100 d-flex justify-content-end">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-img-2.7e7ccf2d.png&w=750&q=75">
+                        </div>
+                    </div>
+                </div>
+               </div>
+              </div>
+              <div class="carousel-item carousel-item-different  py-5">
+               <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                        <div class="txt">
+                            <p>$Starting at <b>$Starting at</b></p>
+                            <h3>The best note book Collection 2023</h3>
+                            <p class="text">Exclusive offer <span>35</span> off this week</p>
+                            <button class="btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12"> 
+                        <div class="img w-100 h-100 d-flex justify-content-end">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-img-3.d589dff0.png&w=640&q=75">
+                        </div>
+                    </div>
+                </div>
+               </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section class="category">
+      <div class="container py-5">
+        <div class="row g-3 d-flex justify-content-between">
+          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+            <div class="card">
+              <div class="img d-flex justify-content-center align-items-center">
+                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FsVxYFDY%2Fproduct-cat-1.png&w=96&q=75" alt="">
+              </div>
+              <div class="text text-center">
+                <h5>Headphones</h5>
+                <p>3 Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+            <div class="card">
+              <div class="img d-flex justify-content-center align-items-center">
+                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FxHFpQTV%2Fproduct-cat-2.png&w=96&q=75" alt="">
+              </div>
+              <div class="text text-center">
+                <h5>Mobile Tablets</h5>
+                <p>3 Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+            <div class="card">
+              <div class="img d-flex justify-content-center align-items-center">
+                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FS0GjZdp%2Fproduct-cat-3.png&w=96&q=75" alt="">
+              </div>
+              <div class="text text-center">
+                <h5>CPU Heat Pipes</h5>
+                <p>2 Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+            <div class="card">
+              <div class="img d-flex justify-content-center align-items-center">
+                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fg3YK8H2%2Fproduct-cat-4.png&w=96&q=75" alt="">
+              </div>
+              <div class="text text-center">
+                <h5>Smart Watch</h5>
+                <p>3 Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+            <div class="card">
+              <div class="img d-flex justify-content-center align-items-center">
+                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FD9qfYWX%2Fproduct-cat-5.png&w=96&q=75" alt="">
+              </div>
+              <div class="text text-center">
+                <h5>Bluetooth</h5>
+                <p>2 Product</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+     <div class="container py-3">
+       <div class="row g-3">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="box d-flex justify-content-center align-items-center py-3">
+            <div class="icon me-2">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="text">
+              <h5>Free Delivery</h5>
+              <p class="m-0">Orders from all item</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="box d-flex justify-content-center align-items-center py-3">
+            <div class="icon me-2">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+            <div class="text">
+              <h5>Return & Refund</h5>
+              <p class="m-0">Money back guarantee</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="box d-flex justify-content-center align-items-center py-3">
+            <div class="icon me-2">
+              <i class="fa-solid fa-percent"></i>
+            </div>
+            <div class="text">
+              <h5>Member Discount</h5>
+              <p class="m-0">Onevery order over $140.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="box d-flex justify-content-center align-items-center py-3">
+            <div class="icon me-2">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="text">
+              <h5>Support 24/7</h5>
+              <p class="m-0">Contact us 24 hours a day</p>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+    </section>
+
+    <section class="products">
+      <div class="container py-5">
+        <div class="box">
+          <div class="text py-3"><h1>Trending Products</h1></div>
+          <ul class="nav nav-pills d-flex align-items-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-new-tab" data-bs-toggle="pill" data-bs-target="#pills-new" type="button" role="tab" aria-controls="pills-new" aria-selected="true">New</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-featured-tab" data-bs-toggle="pill" data-bs-target="#pills-featured" type="button" role="tab" aria-controls="pills-featured" aria-selected="false">Featured</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-seller-tab" data-bs-toggle="pill" data-bs-target="#pills-seller" type="button" role="tab" aria-controls="pills-seller" aria-selected="false">TopSellers</button>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-new" role="tabpanel" aria-labelledby="pills-new-tab" tabindex="0">
+            <div class="row new g-5 m-0"></div>
+          </div>
+          <div class="tab-pane fade" id="pills-featured" role="tabpanel" aria-labelledby="pills-featured-tab" tabindex="0">
+            <div class="row featured g-5 m-0"></div>
+          </div>
+          <div class="tab-pane fade" id="pills-seller" role="tabpanel" aria-labelledby="pills-seller-tab" tabindex="0">
+            <div class="row topSeller g-5 m-0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="container py-5">
+        <div class="row m-0 g-4">
+          <div class="col-md-12 col-lg-8">
+            <div class="imgOne d-flex align-items-center">
+                <div class="text ms-5">
+                  <p>Sale 20% off all store</p>
+                  <h3>Smartphone <br> BLU G91 Pro 2022</h3>
+                  <button class="btn p-0">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div class="imgTwo d-flex align-items-center">
+               <div class="text ms-5">
+                  <h3>HyperX Cloud II <br> Wireless</h3>
+                  <p>Sale 35% off</p>
+                  <button class="btn p-0">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-offer py-5">
+       <div class="container">
+        <div class="head">
+          <h1>Deal of The Day</h1>
+          <button class="btn btn-primary">View All Deals <i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+        <div class="main"></div>
+       </div>
+    </section>
+
+    <section class="arrivals">
+      <div class="container py-5">
+        <div class="head">
+          <h1>New Arrivals</h1>
+          <div class="buttons">
+            <button class="btn prev me-2"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="btn next"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="main py-5">
+          <div class="box">
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-area">
+      <div class="container">
+       <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="head"><h3>Discount Products</h3></div>
+          <div class="main py-4">
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWVdTgR8%2Fheadphone-1.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Headphones</p>
+                <h5>Headphones Wireless.</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$120.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn1YRvWJ%2Fheadphone-5.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Headphones</p>
+                <h5>Gaming Headphone</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$130.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FjvGv6qf%2Fmobile-1.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Mobile Tablets</p>
+                <h5>Galaxy Android Tablet</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$320.00</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="head"><h3>Featured Products</h3></div>
+          <div class="main py-4">
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F5FPhGtq%2Fheadphone-8.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Headphones</p>
+                <h5>Headphone with Mic</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$110.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FfMhtt2T%2Fwatch-9.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Smart Watch</p>
+                <h5>Sony Lady Fitness Watch</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$150.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F3WMPkkf%2Fmobile-5.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Mobile Tablets</p>
+                <h5>iPhone 14 Pro</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$1199.00</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="head"><h3>Selling Products</h3></div>
+          <div class="main py-4">
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn1YRvWJ%2Fheadphone-5.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Headphones</p>
+                <h5>Gaming Headphone</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$130.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWVdTgR8%2Fheadphone-1.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Headphones</p>
+                <h5>Headphones Wireless.</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$120.00</h6>
+              </div>
+            </div>
+            <div class="box d-flex">
+              <div class="img me-4"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FjvGv6qf%2Fmobile-1.png&w=256&q=75" alt=""></div>
+              <div class="text d-flex flex-column justify-content-center">
+                <p class="m-0">Mobile Tablets</p>
+                <h5>Galaxy Android Tablet</h5>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>$320.00</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="container">
+       <div class="head py-5">
+         <h1>Latest news & articles</h1>
+         <button class="btn btn-primary">View All Blog <i class="fa-solid fa-arrow-right-long"></i></button>
+       </div>
+       <div class="main"></div>
+      </div>
+   </section>
+
+   <section class="social-media">
+    <div class="container pb-5">
+      <div class="row m-0 g-5 row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1">
+         <div class="col">
+          <div class="img">
+            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram-1.528276f3.jpg&w=256&q=75" alt="">
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+         </div>
+         <div class="col">
+          <div class="img">
+            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram-2.5c0829a4.jpg&w=256&q=75" alt="">
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+         </div>
+         <div class="col">
+          <div class="img">
+            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram-3.c4e31aec.jpg&w=256&q=75" alt="">
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+         </div>
+         <div class="col">
+          <div class="img">
+            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram-4.ea27ab45.jpg&w=256&q=75" alt="">
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+         </div>
+         <div class="col">
+          <div class="img">
+            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Finstagram-5.924d4303.jpg&w=256&q=75" alt="">
+            <div class="instagram"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+         </div>
+      </div>
+    </div>
+   </section>
+
+   <section class="subscribe pt-4">
+    <div class="imgOne"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsubscribe-shape-1.4138f2bb.png&w=640&q=75" alt=""></div>
+    <div class="imgTwo"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsubscribe-shape-4.cfc874d7.png&w=128&q=75" alt=""></div>
+    <div class="imgThree"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fplane.e386e0af.png&w=48&q=75" alt=""></div>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12 col-lg-7">
+          <div class="text">
+            <p class="m-0">SALE 20% OFF ALL STORE</p>
+            <h1>Subscribe our Newsletter</h1>
+           </div>
+        </div>
+        <div class="col-md-12 col-lg-5">
+          <div class="email h-100">
+            <div class="row">
+              <div class="col-sm-8 col-12 p-0"><input type="text" placeholder="Enter Your Email"></div>
+              <div class="col-sm-4 col-12 p-0">   <button class="button">Subscribe</button></div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <footer>
+    <div class="container py-5">
+      <div class="top">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="box">
+              <div class="logo"><img src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg" alt=""></div>
+              <p>We are a team of designers and developers that create high quality WordPress</p>
+              <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-vimeo-v"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h3>My Account</h3>
+            <ul>
+              <li>Track Orders</li>
+              <li>Shipping</li>
+              <li>Wishlist</li>
+              <li>My Account</li>
+              <li>Order History</li>
+              <li>Returns</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h3>Information</h3>
+            <ul>
+              <li>Our Story</li>
+              <li>Careers</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Latest News</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <h3>Talk To Us</h3>
+            <p>Got Questions? Call us</p>
+            <h5>+670 413 90 762</h5> 
+            <div class="email d-flex align-items-center">
+              <i class="fa-regular fa-envelope"></i>
+              <p class="m-0 ps-2">shofy@support.com</p>
+            </div>
+            <div class="location d-flex align-items-center">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="m-0 ps-2">79 Sleepy Hollow St. Jamaica, New York 1432</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom"></div>
+    </div>
+   </footer>
+
+    <script type="module" src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
