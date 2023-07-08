@@ -126,7 +126,6 @@ localStorage.setItem('cartCount', cartCount);
 });
 }
 
-
 //New Arrivals
 
 const scrollBoxes = document.querySelectorAll('.arrivals .main .box');
@@ -192,3 +191,39 @@ prevButtons[i].addEventListener('click', () => {
 scrollBox.scrollLeft -= containerWidth;
 });
 });
+
+
+
+// Shop
+
+const rowShop = document.querySelector('.shop .box .row');
+let shopCard = '';
+data.slice(12,18).map(item=>(
+  shopCard += `  
+        <div class="col-sm-12 col-md-6 col-lg-4">
+         <div class="card" >
+            <div class="card-img-top">
+              <img  src="${item.image}">
+              <div class="icons">
+                <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div class="eye"> <i class="fa-regular fa-eye"></i></div>
+                <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="txt">${item.category}</p>
+              <h5 class="card-title">${item.title}</h5>
+              <div class="stars">
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+                 <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
+            </div>
+          </div>
+        </div> 
+    `
+));
+rowShop.innerHTML = shopCard;
