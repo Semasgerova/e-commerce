@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shofy</title>
+    <link rel="stylesheet" href="styles/productDetails.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container d-md-flex justify-content-between d-none">
+              <div class="left d-flex align-items-center">
+               <div class="leftBox d-flex align-items-center pe-2">
+                <i class="fa-brands fa-facebook-f"></i>
+                <p class="m-0 ps-2">7500k Followers</p>
+               </div>
+               <div class="rightbox d-flex align-items-center ms-2">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p class="m-0 ps-2"> +(402) 763 282 46</p>
+               </div>
+              </div>
+              <div class="right d-flex">
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    English <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Spanish</a></li>
+                    <li><a class="dropdown-item" href="#">Russian</a></li>
+                    <li><a class="dropdown-item" href="#">Portuguese</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    USD <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">CHF</a></li>
+                    <li><a class="dropdown-item" href="#">GBP</a></li>
+                    <li><a class="dropdown-item" href="#">KWD</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Setting <i class="fa-solid fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                    <li><a class="dropdown-item" href="#">Cart</a></li>
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="header-middle-canvas py-4 d-flex d-lg-none">
+            <div class="container">
+              <div class="menu w-100 d-flex justify-content-between">
+                <div class="left">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="right d-flex align-items-center">
+                  <div class="shopping-bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="count"></span>
+                  </div>
+                  <div class="canvas">
+                    <button
+                      class="btn border-0"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight"
+                      aria-controls="offcanvasRight"
+                    >
+                    <i class="fa-solid fa-bars"></i>
+                    </button>
+    
+                    <div
+                      class="offcanvas offcanvas-end"
+                      tabindex="-1"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
+                      <div class="offcanvas-header">
+                        <img
+                      src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                      alt=""
+                    />
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <nav>
+                          <ul>
+                            <li class="d-flex justify-content-between">
+                              <a href="">Home</a><i class="fa-solid fa-chevron-right"></i>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <a href=""
+                                >Products 
+                              </a><i class="fa-solid fa-chevron-right"></i>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                              <a href="">Shop </a><i class="fa-solid fa-chevron-right"></i>
+                            </li>
+                            <li><a href="">Coupons</a></li>
+                            <li class="d-flex justify-content-between">
+                              <a href="">Blog</a> <i class="fa-solid fa-chevron-right"></i>
+                            </li>
+                            <li><a href="">Contact</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="header-bottom d-lg-flex d-none py-3">
+            <div class="container">
+              <div class="row p-0 d-flex align-items-center">
+                <div class="col-lg-2 p-0 h-100">
+                  <div class="logo">
+                    <div class="d-flex align-items-center">
+                        <img
+                          src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                          alt=""
+                        />
+                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <nav class="w-100 h-100">
+                    <ul
+                      class="h-100 d-flex justify-content-between align-items-center m-0"
+                    >
+                      <li>
+                        <a href="">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu homemenu d-flex p-0">
+                          <li class="text-center">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-1.45bfb44f.jpg&w=1920&q=75" alt="">
+                            <a href="/index.html">Electronics</a>
+                          </li>
+                          <li class="text-center">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-3.30e1f509.jpg&w=640&q=75" alt="">
+                            <a href="">Fashion</a>
+                          </li>
+                          <li class="text-center">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-1.45bfb44f.jpg&w=1920&q=75" alt="">
+                            <a href="">Beauty</a>
+                          </li>
+                          <li class="text-center">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-4.f76c63c6.jpg&w=640&q=75" alt="">
+                            <a href="">Jewelery</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href=""
+                          >Products <i class="fa-solid fa-chevron-down"></i
+                        ></a>
+                        <ul class="submenu menu d-flex pt-5">
+                          <li>
+                            <a href="">Shop Page</a>
+                            <ul class="p-0">
+                              <li><a href="">Only Categories</a></li>
+                              <li><a href="">Shop Grid with Sidebar</a></li>
+                              <li><a href="">Product Details</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="/product.html">Products</a>
+                            <ul class="p-0">
+                              <li><a href="">Product Simple</a></li>
+                              <li><a href="">With Video</a></li>
+                              <li><a href="">With Countdown Timer</a></li>
+                              <li><a href="">Variations Swatches</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="">eCommerce</a>
+                            <ul class="p-0">
+                              <li><a href="">Shopping Cart</a></li>
+                              <li><a href="">Compare</a></li>
+                              <li><a href="">Wishlist</a></li>
+                              <li><a href="">Checkout</a></li>
+                              <li><a href="">My Account</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="">More Pages</a>
+                            <ul class="p-0">
+                              <li><a href="">Login</a></li>
+                              <li><a href="">Register</a></li>
+                              <li><a href="">Forgot Password</a></li>
+                              <li><a href="">404 Error</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="">Shop <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                          <li><a href="/shop.html">Shop</a></li>
+                          <li><a href="">Right Sidebar</a></li>
+                          <li><a href="">Hidden Sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Coupons</a></li>
+                      <li>
+                        <a href="">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                          <li><a href="">Blog Standard</a></li>
+                          <li><a href="">Blog Grid</a></li>
+                          <li><a href="">Blog List</a></li>
+                          <li><a href="">Blog Details</a></li>
+                          <li><a href="">Blog Details Full Width</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="col-lg-5">
+                    <div class="box d-flex justify-content-end">
+                        <div class="carts d-flex justify-content-between">
+                          <div class="search d-flex align-items-center">
+                            <input type="text" placeholder="Search for Products">
+                            <div class="btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                          </div>
+                          <div class="info d-flex align-items-center">
+                            <div class="arrow">
+                              <i class="fa-solid fa-right-left"></i>
+                            </div>
+                            <div class="heart">
+                              <i class="fa-regular fa-heart"></i>
+                              <span>0</span>
+                            </div>
+                            <div class="shopping-bag">
+                              <i class="fa-solid fa-bag-shopping"></i>
+                              <span id="productCount"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="product">
+        <div class="container">
+            <div class="head pt-5">
+                <p class="d-flex align-items-center"><i class="fa-solid fa-house"></i> Home <i class="fa-solid fa-circle"></i> Beauty of Skin <i class="fa-solid fa-circle"></i> Grand Plumping Highlighter</p>
+            </div>
+            <div class="row g-5 m-0 pt-3">
+                <div class="col-md-12 col-lg-6">
+                    <div class="box">
+                        <div class="boxes">
+                          <div class="nav-link p-0 active" id="colorOne"><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FwhwFFGX%2Flip-liner-1.png&w=96&q=75" alt=""></div></div>
+                          <div class="nav-link p-0" id="colorTwo"><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fh9PYFHJ%2Flip-liner-2.png&w=96&q=75" alt=""></div></div>
+                          <div class="nav-link p-0" id="colorThree"><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLYr2Nkp%2Flip-liner-3.png&w=96&q=75" alt=""></div></div>
+                        </div>
+                        <div class="photos ps-3">
+                          <div class="photo d-none" id="colorOne" ><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FwhwFFGX%2Flip-liner-1.png&w=640&q=75" alt=""></div></div>
+                          <div class="photo d-none" id="colorTwo" ><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fh9PYFHJ%2Flip-liner-2.png&w=640&q=75" alt=""></div></div>
+                          <div class="photo" id="colorThree"><div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLYr2Nkp%2Flip-liner-3.png&w=640&q=75" alt=""></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="top">
+                        <h6>Beauty of Skin</h6>
+                        <h1>Grand Plumping Highlighter</h1>
+                        <div class="stock d-flex">
+                            <p class="m-0">in stock</p>
+                            <div class="stars d-flex align-items-center mx-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span>(0 Review)</span>
+                        </div>
+                        <p>Achieve that sun-kissed glow with the Baked Mineral Bronzer from INIKA. Perfect for contouring, the  ...<span>See more</span></p>
+                        <div class="price d-flex align-items-end">
+                            <del>$60</del><h3 class="ps-2 m-0">$57.00</h3>
+                        </div>
+                        <div class="color pt-2">
+                            <p>Color:</p>
+                            <div class="colors d-flex align-items-center">
+                                <div class="nav-link colorOne active" id="colorOne"></div>
+                                <div class="nav-link colorTwo" id="colorTwo"></div>
+                                <div class="nav-link colorThree" id="colorThree"></div>
+                            </div>
+                        </div>
+                        <div class="addCart pt-2">
+                            <p>Quantity:</p>
+                            <div class="box">
+                                <div class="quantity d-flex align-items-center">
+                                    <div class="btn btn-primary decrement">-</div>
+                                    <span></span>
+                                    <div class="btn btn-primary increment">+</div>
+                                </div>
+                                <div class="btn add d-flex align-items-center justify-content-center"><p class="m-0 w-100">Add To Cart</p></div>
+                            </div>
+                        </div>
+                        <button class="buy mt-3">Buy Now</button>
+                        <div class="icons d-flex pt-3">
+                            <p><i class="fa-solid fa-code-compare"></i> Compare</p>
+                            <p class="mx-3"><i class="fa-regular fa-heart"></i>Add Wishlist</p>
+                            <p><i class="fa-regular fa-circle-question"></i> Ask a question</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="categories">
+                            <p>SKU: DEB7SDVX62</p>
+                            <p>Category: Beauty of Skin</p>
+                            <p>Tag: beauty of skin</p>
+                        </div>
+                        <div class="social-media d-flex align-items-center pt-2">
+                            <p class="m-0 me-3">Share: </p>
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <i class="fa-brands fa-vimeo-v"></i>
+                        </div>
+                        <div class="check pt-3">
+                            <p class="m-0"><i class="fa-regular fa-circle-check"></i> 30 days easy returns</p>
+                            <p><i class="fa-regular fa-circle-check"></i> Order yours before 2.30pm for same day dispatch</p>
+                        </div>
+                        <div class="cart p-3">
+                            <div class="left"><p class="m-0">Guaranteed safe <br> & secure checkout</p></div>
+                            <div class="right"><img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpayment-option.11519bed.png&w=256&q=75" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <script type="module" src="js/productDetails.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
