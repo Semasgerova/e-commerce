@@ -345,6 +345,7 @@ body{
 }
 .product .top .color .colors .nav-link.active{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 2px solid white;
   width: 20px;
   height: 20px;
 }
@@ -424,6 +425,159 @@ body{
   width: 100%;
 }
 
+/* Desc */
+.desc .nav{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.229);
+}
+.desc .nav .nav-item .link{
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.desc .tab-content .tab-pane .table tr{
+  border: 1px solid rgba(0, 0, 0, 0.332);
+}
+.desc .tab-content .tab-pane .rating .stars i{
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.236);
+}
+.desc .tab-content .tab-pane form p{
+   font-weight: bold;
+   font-size: 14px;
+   color: rgba(0, 0, 0, 0.673);
+}
+.desc .tab-content .tab-pane form textarea{
+  border: 1px solid rgba(0, 0, 0, 0.223);
+}
+.desc .tab-content .tab-pane form input{
+  height: 7vh;
+  border: 1px solid rgba(0, 0, 0, 0.223);
+}
+.desc .tab-content .tab-pane form .btn{
+  background-color: #0989ff;
+  color: white;
+  width: 25%;
+  height: 6vh;
+  border-radius: 0;
+}
+.products{
+  border-top: 1px solid rgba(0, 0, 0, 0.223);
+}
+.products .head p{
+  color: #0989ff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.products .head h1{
+  color: #010f1c;
+  font-weight: bold;
+}
+.products .box .card {
+  transition: 0.3s;
+  border: none;
+}
+.products .box .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.products .box .card .card-img-top img {
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.products .box .card .card-img-top {
+  position: relative;
+  background-color: #f6f6f6;
+}
+.products .box .card .card-img-top .icons {
+  position: absolute;
+  top: 10%;
+  opacity: 0;
+  right: 0%;
+  transition: 0.3s;
+}
+.products .box .card:hover .card-img-top .icons {
+  opacity: 1;
+  right: 8%;
+}
+.products .box .card .card-img-top .icons div {
+  border: 1px solid #bfbfbf;
+  padding: 10px 10px;
+  background-color: white;
+  transition: 0.3s;
+}
+.products .box .card .card-img-top .icons div:hover {
+  background-color: #010f1c;
+  color: white;
+  cursor: pointer;
+}
+.products .box .card:hover .card-img-top img {
+  transform: scale(1.2);
+}
+.products .box .card .card-body .txt {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.products .box .card .card-body h5 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #010f1c;
+  transition: .3s;
+  cursor: pointer;
+}
+.products .box .card .card-body h5:hover{
+  color: #0989ff;
+}
+.products .box .card .card-body .card-text {
+  color: #010f1c;
+}
+
+/* footer */
+
+footer{
+  background-color: #f4f7f9;
+}
+footer .top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.162);
+}
+footer .top .box p{
+  margin-top: 10px;
+  width: 95%;
+  color: #010f1c;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .top .box .icons i{
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  color: #55585b;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+footer .top h3{
+  color: #010f1c;
+  font-size: 20px;
+}
+footer .top ul li{
+  font-size: 14px;
+  margin-top: 8px;
+}
+footer .top h5{
+  color: #010f1c;
+  font-size: 22px;
+  font-weight: bold;
+}
+footer .bottom p{
+  color: #55585b;
+}
+footer .bottom p span{
+  color: #0989ff;
+}
+footer .bottom .img img{
+   width: 40%;
+}
+
+
 /* -------------------------------------------------------Media----------------------------------------------------------------------- */
 @media (max-width: 1400px){
   .product .top .addCart .box{
@@ -456,5 +610,46 @@ body{
 @media (max-width: 550px){
   .product .bottom .cart{
     display: block;
+  }
+  .product .head p{
+    font-size: 10px;
+    margin: 0;
+  }
+
+  /* desc */
+  .desc .tab-content .tab-pane .table tr{
+    font-size: 12px;
+  }
+}
+@media (max-width: 430px){
+    .product .top h1{
+      font-size: 22px;
+    }
+    .product .top .stock p{
+      font-size: 10px;
+    }
+    .product .top .stock .stars i{
+      font-size: 8px;
+    }
+    .product .top .stock span{
+      font-size: 12px;
+    }
+    .product .top p{
+      font-size: 12px;
+    }
+    .product .bottom p{
+      font-size: 12px;
+    }
+    /* desc */
+    .desc .tab-content .tab-pane form .btn{
+      width: 40%;
+    }
+}
+@media (max-width: 320px){
+  .product .head p{
+    font-size: 8px;
+  }
+  .desc .tab-content .tab-pane .table tr{
+    font-size: 10px;
   }
 }

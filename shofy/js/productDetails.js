@@ -85,3 +85,11 @@ localStorage.setItem('currentValue', 0);
 localStorage.setItem('cartCount', parseInt(productCount));
 document.getElementById("productCount").innerText = productCount;
 document.getElementById("count").innerText = productCount;
+
+const cart = document.querySelector('#cart');
+cart.addEventListener('click',()=>{
+    localStorage.setItem('cartCount', parseInt(productCount)+1);
+    document.getElementById("productCount").innerText = productCount;
+document.getElementById("count").innerText = productCount;
+window.location.reload();
+})
