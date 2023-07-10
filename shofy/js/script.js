@@ -9,7 +9,7 @@ const rowSeller = document.querySelector('.products .tab-content .tab-pane .topS
 let newCard = '';
 data.slice(0,8).map(item=>(
     newCard += `  
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
             <div class="card-img-top">
               <img  src="${item.image}">
@@ -40,7 +40,7 @@ rowNew.innerHTML = newCard;
 let featuredCard = '';
 data.slice(8,12).map(item=>(
     featuredCard += `  
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
          <div class="card-img-top">
            <img  src="${item.image}">
@@ -71,7 +71,7 @@ rowFeatured.innerHTML = featuredCard;
 let sellerCard = '';
 data.slice(12,20).map(item=>(
     sellerCard += `  
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
          <div class="card-img-top">
             <img  src="${item.image}">
@@ -203,6 +203,19 @@ rowShop.innerHTML = shopCard;
 
 
 // Add to cart
+const notifications = document.querySelector('.notifications');
+const createToast = () => {
+const toast = document.createElement('div');
+toast.className = 'notification d-flex align-items-center justify-content-around';
+toast.innerHTML = `
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> Added to cart</h6>
+`;
+notifications.appendChild(toast);
+setTimeout(() => {
+  toast.remove(); // Remove the toast after 3 seconds
+  }, 2000);
+}
+
 const buttons = document.querySelectorAll('#cart');
 const cart = document.querySelector('.header .header-middle .box .carts .info .shopping-bag span');
 const canvasCart = document.querySelector('.header .header-middle-canvas .menu .right .shopping-bag span');
@@ -227,6 +240,7 @@ canvasCart.setAttribute('data-count', cartCount);
 canvasCart.innerHTML = cartCount;
 
 localStorage.setItem('cartCount', cartCount);
+createToast();
 
 });
 }

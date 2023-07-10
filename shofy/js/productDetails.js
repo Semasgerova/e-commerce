@@ -3,6 +3,7 @@ var productCount = parseInt(localStorage.getItem('cartCount') || 0);
 document.getElementById("productCount").innerText = productCount;
 document.getElementById("count").innerText = productCount;
 
+
 // Change Photo
 
 const photos = document.querySelectorAll(".product .box .photos .photo");
@@ -74,12 +75,29 @@ localStorage.setItem('currentValue', cartCount);
 } )
 
 productCount += parseInt(localStorage.getItem("currentValue") || 0);
-   
-// Add to cart
+
+
+const notifications = document.querySelector('.notifications');
+const createToast = () => {
+const toast = document.createElement('div');
+toast.className = 'notification d-flex align-items-center justify-content-around';
+toast.innerHTML = `
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> Added to cart</h6>
+`;
+notifications.appendChild(toast);
+setTimeout(() => {
+  toast.remove(); 
+  }, 2000);
+}
+
 const add = document.querySelector('.product .top .addCart .add');
 add.addEventListener('click', () => {
    localStorage.setItem('cartCount', parseInt(productCount));
-   window.location.reload();
+   setTimeout(() => {
+    window.location.reload();
+    }, 2000);
+   
+   createToast();
 });
 localStorage.setItem('currentValue', 0);
 localStorage.setItem('cartCount', parseInt(productCount));
@@ -91,5 +109,8 @@ cart.addEventListener('click',()=>{
     localStorage.setItem('cartCount', parseInt(productCount)+1);
     document.getElementById("productCount").innerText = productCount;
 document.getElementById("count").innerText = productCount;
-window.location.reload();
+setTimeout(() => {
+    window.location.reload();
+    }, 2000);
+createToast();
 })
