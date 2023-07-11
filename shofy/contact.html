@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shofy</title>
+    <link rel="stylesheet" href="/styles/contact.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+          <div class="container d-md-flex justify-content-between d-none">
+            <div class="left d-flex align-items-center">
+              <div class="leftBox d-flex align-items-center pe-2">
+                <i class="fa-brands fa-facebook-f"></i>
+                <p class="m-0 ps-2">7500k Followers</p>
+              </div>
+              <div class="rightbox d-flex align-items-center ms-2">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p class="m-0 ps-2">+(402) 763 282 46</p>
+              </div>
+            </div>
+            <div class="right d-flex">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  English <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Spanish</a></li>
+                  <li><a class="dropdown-item" href="#">Russian</a></li>
+                  <li><a class="dropdown-item" href="#">Portuguese</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  USD <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">EUR</a></li>
+                  <li><a class="dropdown-item" href="#">CHF</a></li>
+                  <li><a class="dropdown-item" href="#">GBP</a></li>
+                  <li><a class="dropdown-item" href="#">KWD</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Setting <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">My Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                  <li><a class="dropdown-item" href="#">Cart</a></li>
+                  <li><a class="dropdown-item" href="#">Login</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-middle-canvas py-4 d-flex d-lg-none">
+          <div class="container">
+            <div class="menu w-100 d-flex justify-content-between">
+              <div class="left">
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="right d-flex align-items-center">
+                <div class="shopping-bag">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <span id="count"></span>
+                </div>
+                <div class="canvas">
+                  <button
+                    class="btn border-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+  
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <img
+                        src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                        alt=""
+                      />
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <nav>
+                        <ul>
+                          <li class="d-flex justify-content-between">
+                            <a href="/index.html">Home</a
+                            ><i class="fa-solid fa-chevron-right"></i>
+                          </li>
+                          <li class="d-flex justify-content-between">
+                            <a href="/product.html">Products </a
+                            ><i class="fa-solid fa-chevron-right"></i>
+                          </li>
+                          <li class="d-flex justify-content-between">
+                            <a href="/shop.html">Shop </a
+                            ><i class="fa-solid fa-chevron-right"></i>
+                          </li>
+                          <li  class="d-flex justify-content-between"><a href="">Coupons</a><i class="fa-solid fa-chevron-right"></i></li>
+                          <li class="d-flex justify-content-between">
+                            <a href="">Blog</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                          </li>
+                          <li  class="d-flex justify-content-between"><a href="/contact.html">Contact</a><i class="fa-solid fa-chevron-right"></i></li>
+                          <li  class="d-flex justify-content-between"><a href="/login.html">Login</a><i class="fa-solid fa-chevron-right"></i></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom d-lg-flex d-none py-3">
+          <div class="container">
+            <div class="row p-0 d-flex align-items-center">
+              <div class="col-lg-2 p-0 h-100">
+                <div class="logo">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <nav class="w-100 h-100">
+                  <ul
+                    class="h-100 d-flex justify-content-between align-items-center m-0"
+                  >
+                    <li>
+                      <a href="">Home <i class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="submenu homemenu d-flex p-0">
+                        <li class="text-center">
+                          <img
+                            src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-1.45bfb44f.jpg&w=1920&q=75"
+                            alt=""
+                          />
+                          <a href="/index.html">Electronics</a>
+                        </li>
+                        <li class="text-center">
+                          <img
+                            src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-3.30e1f509.jpg&w=640&q=75"
+                            alt=""
+                          />
+                          <a href="">Fashion</a>
+                        </li>
+                        <li class="text-center">
+                          <img
+                            src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-1.45bfb44f.jpg&w=1920&q=75"
+                            alt=""
+                          />
+                          <a href="">Beauty</a>
+                        </li>
+                        <li class="text-center">
+                          <img
+                            src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmenu-home-4.f76c63c6.jpg&w=640&q=75"
+                            alt=""
+                          />
+                          <a href="">Jewelery</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href=""
+                        >Products <i class="fa-solid fa-chevron-down"></i
+                      ></a>
+                      <ul class="submenu menu d-flex pt-5">
+                        <li>
+                          <a href="">Shop Page</a>
+                          <ul class="p-0">
+                            <li><a href="">Only Categories</a></li>
+                            <li><a href="">Shop Grid with Sidebar</a></li>
+                            <li><a href="">Product Details</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="/product.html">Products</a>
+                          <ul class="p-0">
+                            <li><a href="">Product Simple</a></li>
+                            <li><a href="">With Video</a></li>
+                            <li><a href="">With Countdown Timer</a></li>
+                            <li><a href="">Variations Swatches</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">eCommerce</a>
+                          <ul class="p-0">
+                            <li><a href="">Shopping Cart</a></li>
+                            <li><a href="">Compare</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Checkout</a></li>
+                            <li><a href="">My Account</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">More Pages</a>
+                          <ul class="p-0">
+                            <li><a href="">Login</a></li>
+                            <li><a href="">Register</a></li>
+                            <li><a href="">Forgot Password</a></li>
+                            <li><a href="">404 Error</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Shop <i class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                        <li><a href="/shop.html">Shop</a></li>
+                        <li><a href="">Right Sidebar</a></li>
+                        <li><a href="">Hidden Sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Coupons</a></li>
+                    <li>
+                      <a href="">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                      <ul class="submenu">
+                        <li><a href="">Blog Standard</a></li>
+                        <li><a href="">Blog Grid</a></li>
+                        <li><a href="">Blog List</a></li>
+                        <li><a href="">Blog Details</a></li>
+                        <li><a href="">Blog Details Full Width</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/contact.html">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-lg-5">
+                <div class="box d-flex justify-content-end">
+                  <div class="carts d-flex justify-content-between">
+                    <div class="search d-flex align-items-center">
+                      <input type="text" placeholder="Search for Products" />
+                      <div class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                    </div>
+                    <div class="info d-flex align-items-center">
+                      <div class="arrow">
+                        <i class="fa-solid fa-right-left"></i>
+                      </div>
+                      <div class="heart">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>0</span>
+                      </div>
+                      <div class="shopping-bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="productCount"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="message">
+        <div class="container">
+          <div class="head text-center py-5">
+            <h1>Keep In Touch with Us</h1>
+            <p class="d-flex align-items-center justify-content-center">Home <i class="fa-solid fa-circle"></i> Contact</p>
+          </div>
+          <div class="bottom">
+            <div class="box p-5">
+                <div class="headText">
+                    <h2>Sent A Message</h2>
+                </div>
+                <div class="row g-5">
+                   <div class="col-md-12 col-lg-8">
+                    <div class="inputs">
+                        <div class="input">
+                            <p>Your Name</p>
+                            <input type="text" class="ps-3" placeholder="Shahnewaz Sakil">
+                        </div>
+                        <div class="input">
+                            <p>Your Email</p>
+                            <input type="email" class="ps-3" placeholder="shofy@mail.com">
+                        </div>
+                        <div class="input">
+                            <p>Subject</p>
+                            <input type="text" class="ps-3" placeholder="Write your subject">
+                        </div>
+                        <div class="text">
+                            <p>Your Message</p>
+                            <textarea class="p-3" cols="30" rows="7" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="check d-flex my-3">
+                            <input type="checkbox" name="" id=""> <p class="m-0 ms-2">Save my name, email, and website in this browser for the next time I comment.</p>
+                        </div>
+                        <button class="btn">Send Message</button>
+                    </div>
+                   </div>
+                   <div class="col-md-12 col-lg-4">
+                    <div class="infos pt-4">
+                        <div class="info">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcontact-icon-1.9066600e.png&w=64&q=75" alt="">
+                            <p>contact@shofy.com</p>
+                            <h5>+670 413 90 762</h5>
+                        </div>
+                        <div class="info my-5">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcontact-icon-2.7114edc9.png&w=96&q=75" alt="">
+                            <p>84 sleepy hollow st. <br> jamaica, New York 1432</p>
+                        </div>
+                        <div class="info">
+                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcontact-icon-3.a1ff7720.png&w=96&q=75" alt="">
+                            <p>Find on social media</p>
+                            <div class="social-media">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            <div className="map my-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d387191.33808467403!2d-73.979681!3d40.69748800000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1689111101633!5m2!1sen!2sbd" style="width: 100%; height: 20vh;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container py-5">
+          <div class="top">
+            <div class="row m-0 g-5">
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="box">
+                  <div class="logo">
+                    <img
+                      src="https://shofy-client.vercel.app/_next/static/media/logo.414c93a2.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    We are a team of designers and developers that create high
+                    quality WordPress
+                  </p>
+                  <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-vimeo-v"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <h3>My Account</h3>
+                <ul class="ps-3">
+                  <li>Track Orders</li>
+                  <li>Shipping</li>
+                  <li>Wishlist</li>
+                  <li>My Account</li>
+                  <li>Order History</li>
+                  <li>Returns</li>
+                </ul>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <h3>Information</h3>
+                <ul class="ps-3">
+                  <li>Our Story</li>
+                  <li>Careers</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms & Conditions</li>
+                  <li>Latest News</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <h3>Talk To Us</h3>
+                <p>Got Questions? Call us</p>
+                <h5>+670 413 90 762</h5>
+                <div class="email d-flex align-items-center">
+                  <i class="fa-regular fa-envelope"></i>
+                  <p class="m-0 ps-2 w-75">shofy@support.com</p>
+                </div>
+                <div class="location pt-3 d-flex align-items-center">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <p class="m-0 ps-2 w-75">
+                    79 Sleepy Hollow St. Jamaica, New York 1432
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom pt-5">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <p>
+                  &copy; 2023 All Rights Reserved | Next js Template by
+                  <span>ThemePure.</span>
+                </p>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="img w-100 d-md-flex justify-content-end">
+                  <img
+                    src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffooter-pay.d72dda14.png&w=256&q=75"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="/js/contact.js"></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>

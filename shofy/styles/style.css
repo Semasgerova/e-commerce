@@ -130,13 +130,18 @@ body {
 .header .header-middle .box .carts {
   width: 65%;
 }
-
-.header .header-middle .box .carts .login p {
+.header .header-middle .box .carts .login a{
+  text-decoration: none;
+}
+.header .header-middle .box .carts .login a i{
+  color: #55585b;
+}
+.header .header-middle .box .carts .login a p {
   color: #55585b;
   font-size: 14px;
   font-weight: bold;
 }
-.header .header-middle .box .carts .login p span {
+.header .header-middle .box .carts .login a p span {
   font-size: 12px;
   color: 767a7d;
 }
