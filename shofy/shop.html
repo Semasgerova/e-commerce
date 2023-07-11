@@ -21,6 +21,8 @@
     />
   </head>
   <body>
+    <div class="notifications d-flex justify-content-center"></div>
+
     <header class="header">
       <div class="header-top">
         <div class="container d-md-flex justify-content-between d-none">
@@ -320,27 +322,111 @@
             <div class="price">
               <h5>Price Filter</h5>
               <div class="range-input">
-                <input type="range" id="min-value" min="0" max="600" value="0">
-                <input type="range" id="max-value" min="601" max="1200" value="1200">
+                <div class="slider"></div>
+                <input
+                  type="range"
+                  id="min-value"
+                  min="0"
+                  max="1200"
+                  value="0"
+                />
+                <input
+                  type="range"
+                  id="max-value"
+                  min="0"
+                  max="1200"
+                  value="1200"
+                />
               </div>
-              $<span id="min"></span> - 
-              $<span id="max"></span>
+              $<span id="min"></span> - $<span id="max"></span>
             </div>
             <div class="status py-3">
               <h5>Product Status</h5>
-              <input type="checkbox"> On sale <br>
-              <input type="checkbox"> In stock
+              <input type="checkbox" /> On sale <br />
+              <input type="checkbox" /> In stock
             </div>
             <div class="categories">
               <h5>Categories</h5>
+              <ul>
+                <li id="Headphones">Headphones</li>
+                <li id="Mobile Tablets">Mobile Tablets</li>
+                <li id="CPU Heat Pipes">CPU Heat Pipes</li>
+                <li id="Smart Watch">Smart Watch</li>
+                <li id="Bluetooth">Bluetooth</li>
+                <li id="Clothing">Clothing</li>
+                <li id="Bags">Bags</li>
+                <li id="Shoes">Shoes</li>
+                <li id="Discover Skincare">Discover Skincare</li>
+                <li id="Beauty of Skin">Beauty of Skin</li>
+                <li id="Awesome Lip Care">Awesome Lip Care</li>
+                <li id="Facial Care">Facial Care</li>
+                <li id="Bracelets">Bracelets</li>
+                <li id="Earrings">Earrings</li>
+                <li id="Necklaces">Necklaces</li>
+              </ul>
             </div>
             <div class="color">
               <h5>Filter by Color</h5>
+              <ul class="p-0">
+                <li id="purple">
+                  <div class="box purple"></div>
+                  Purple
+                </li>
+                <li id="grey">
+                  <div class="box grey"></div>
+                  Grey
+                </li>
+                <li id="pink">
+                  <div class="box pink"></div>
+                  Pink
+                </li>
+                <li id="cyan">
+                  <div class="box cyan"></div>
+                  Cyan
+                </li>
+                <li id="orange">
+                  <div class="box orange"></div>
+                  Orange
+                </li>
+                <li id="black">
+                  <div class="box black"></div>
+                  Black
+                </li>
+                <li id="gold">
+                  <div class="box gold"></div>
+                  Gold
+                </li>
+                <li id="red">
+                  <div class="box red"></div>
+                  Red
+                </li>
+                <li id="white">
+                  <div class="box white"></div>
+                  White
+                </li>
+                <li id="green">
+                  <div class="box green"></div>
+                  Green
+                </li>
+                <li id="yellow">
+                  <div class="box yellow"></div>
+                  Yellow
+                </li>
+                <li id="blue">
+                  <div class="box blue"></div>
+                  Blue
+                </li>
+              </ul>
             </div>
             <div class="topProducts">
               <h5>Top Rated Products</h5>
               <div class="box d-flex">
-                <div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWVdTgR8%2Fheadphone-1.png&w=96&q=75" alt=""></div>
+                <div class="img">
+                  <img
+                    src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FWVdTgR8%2Fheadphone-1.png&w=96&q=75"
+                    alt=""
+                  />
+                </div>
                 <div class="txt d-flex flex-column justify-content-center">
                   <div class="stars d-flex align-items-center">
                     <i class="fa-solid fa-star"></i>
@@ -348,13 +434,18 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                </div>
+                  </div>
                   <h6>Headphones Wireless.</h6>
                   <p class="m-0">$120.00</p>
                 </div>
               </div>
               <div class="box d-flex">
-                <div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F3WMPkkf%2Fmobile-5.png&w=96&q=75" alt=""></div>
+                <div class="img">
+                  <img
+                    src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F3WMPkkf%2Fmobile-5.png&w=96&q=75"
+                    alt=""
+                  />
+                </div>
                 <div class="txt d-flex flex-column justify-content-center">
                   <div class="stars d-flex align-items-center">
                     <i class="fa-solid fa-star"></i>
@@ -362,13 +453,18 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                </div>
+                  </div>
                   <h6>iPhone 14 Pro</h6>
                   <p class="m-0">$1019.15</p>
                 </div>
               </div>
               <div class="box d-flex">
-                <div class="img"><img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FyRRLCc5%2Fwatch-1.png&w=96&q=75" alt=""></div>
+                <div class="img">
+                  <img
+                    src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FyRRLCc5%2Fwatch-1.png&w=96&q=75"
+                    alt=""
+                  />
+                </div>
                 <div class="txt d-flex flex-column justify-content-center">
                   <div class="stars d-flex align-items-center">
                     <i class="fa-solid fa-star"></i>
@@ -376,7 +472,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                </div>
+                  </div>
                   <h6>Apple Watch Sport Band</h6>
                   <p class="m-0">$426.55</p>
                 </div>
@@ -385,16 +481,34 @@
             <div class="brand mb-5">
               <h5>Popular Brands</h5>
               <div class="box">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmCqwRnT%2Fbrand-8.png&w=64&q=75" alt="">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn3Wktzh%2Fbrand-4.png&w=64&q=75" alt="">
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmCqwRnT%2Fbrand-8.png&w=64&q=75"
+                  alt=""
+                />
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn3Wktzh%2Fbrand-4.png&w=64&q=75"
+                  alt=""
+                />
               </div>
               <div class="box">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FGTzWqnP%2Fbrand-2.png&w=64&q=75" alt="">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmCqwRnT%2Fbrand-8.png&w=64&q=75" alt="">
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FGTzWqnP%2Fbrand-2.png&w=64&q=75"
+                  alt=""
+                />
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FmCqwRnT%2Fbrand-8.png&w=64&q=75"
+                  alt=""
+                />
               </div>
               <div class="box">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn3Wktzh%2Fbrand-4.png&w=64&q=75" alt="">
-                <img src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLNymxGk%2Fbrand-7.png&w=64&q=75" alt="">
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn3Wktzh%2Fbrand-4.png&w=64&q=75"
+                  alt=""
+                />
+                <img
+                  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FLNymxGk%2Fbrand-7.png&w=64&q=75"
+                  alt=""
+                />
               </div>
             </div>
             <div class="reset">
@@ -402,27 +516,27 @@
               <div class="btn mt-3">Reset Filter</div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-9">
+          <div class="col-md-12 col-lg-9 p-0">
             <div class="top">
               <div class="row m-0">
-                <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-6 p-0">
                   <div class="boxes d-flex align-items-center">
                     <div class="btn col3">
                       <i class="fa-solid fa-border-all"></i>
                     </div>
-                    <div class="btn col1 mx-2"><i class="fa-solid fa-bars"></i></div>
+                    <div class="btn col1 mx-2">
+                      <i class="fa-solid fa-bars"></i>
+                    </div>
                     <p class="m-0">Showing 1–12 of 37 results</p>
                   </div>
                 </div>
-                <div class="col-md-12 col-lg-6">
+                <div class="col-md-12 col-lg-6 p-0">
                   <div class="box sort">
                     <div class="form-group me-4 d-flex align-items-center">
                       <select class="form-control">
                         <option value="">Default Sorting</option>
-                        <option value="">Low To High</option>
-                        <option value="">High Ho Low</option>
-                        <option value="">New Added</option>
-                        <option value="">On Sale</option>
+                        <option value="low">Low To High</option>
+                        <option value="high">High Ho Low</option>
                       </select>
                       <i class="fa-solid fa-chevron-down"></i>
                     </div>
@@ -432,8 +546,14 @@
               </div>
             </div>
             <div class="bottom">
-              <div class="row m-0 g-3">
-                
+              <div class="row m-0 g-3"></div>
+            </div>
+            <div class="page-list d-flex justify-content-center">
+              <div class="pageBtn" id="prevPageBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+              <div class="pageBtn" id="nextPageBtn">
+                <i class="fa-solid fa-chevron-right"></i>
               </div>
             </div>
           </div>
