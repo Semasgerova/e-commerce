@@ -1,5 +1,7 @@
 import {data} from "../data/data.js";
 
+//Aos
+AOS.init();
 // Products
 
 const rowNew = document.querySelector('.products .tab-content .tab-pane .new');
@@ -100,36 +102,103 @@ data.slice(12,20).map(item=>(
 rowSeller.innerHTML = sellerCard;
 
 //Product Offer
-const offerProduct = document.querySelector('.product-offer .main .box');
-let offerCard = '';
-data.slice(0,3).map(item=>(
-  offerCard += `  
-         <div class="card me-2" >
-         <div class="card-img-top">
-            <img  src="${item.image}">
-            <div class="icons">
-            <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-            <div class="eye"> <i class="fa-regular fa-eye"></i></div>
-            <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-          </div>
-         </div>
-            <div class="card-body">
-            <p class="txt">${item.category}</p>
-              <h5 class="card-title">${item.title}</h5>
-              <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-           </div>
-              <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
-            </div>
-          </div>
+$(document).ready(function(){
+  $('#lazy').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 996,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  $('#responsive').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 996,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  });
+
+// const offerProduct = document.querySelector('.product-offer .main .box');
+// let offerCard = '';
+// data.slice(0,3).map(item=>(
+//   offerCard += `  
+//          <div class="card me-2" >
+//          <div class="card-img-top">
+//             <img  src="${item.image}">
+//             <div class="icons">
+//             <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+//             <div class="eye"> <i class="fa-regular fa-eye"></i></div>
+//             <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+//           </div>
+//          </div>
+//             <div class="card-body">
+//             <p class="txt">${item.category}</p>
+//               <h5 class="card-title">${item.title}</h5>
+//               <div class="stars">
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//            </div>
+//               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
+//             </div>
+//           </div>
        
-    `
-));
-offerProduct.innerHTML = offerCard;
+//     `
+// ));
+// offerProduct.innerHTML = offerCard;
 
 // New Arrival
 const scrollBoxes = document.querySelectorAll('.arrivals .main .box');
@@ -208,12 +277,12 @@ const createToast = () => {
 const toast = document.createElement('div');
 toast.className = 'notification d-flex align-items-center justify-content-around';
 toast.innerHTML = `
-<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> Added to cart</h6>
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> 1 product added to cart</h6>
 `;
 notifications.appendChild(toast);
 setTimeout(() => {
-  toast.remove(); // Remove the toast after 3 seconds
-  }, 2000);
+  toast.remove(); // 
+  }, 1000);
 }
 
 const buttons = document.querySelectorAll('#cart');

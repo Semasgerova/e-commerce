@@ -5,7 +5,7 @@ const data = [
       "https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fj4sDV3Q%2Fwatch-5.png&w=1920&q=75",
     title: "Sony Smart Watch",
     category: "Smart Watch",
-    price: 190.0,
+    price: 190.00,
     previousPrice: 200,
     color: "black",
   },

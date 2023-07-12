@@ -31,7 +31,7 @@ body {
   bottom: 0px;
   left: 0;
   background-color: greenyellow;
-  animation: progress 2s linear forwards;
+  animation: progress 1s linear forwards;
 }
 @keyframes progress {
   100% {
@@ -737,81 +737,85 @@ body {
   position: relative;
   overflow: hidden;
 }
-.product-offer .main .box {
-  display: flex;
-  justify-content: space-between;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-.product-offer .main .box::-webkit-scrollbar {
-  display: none;
-}
-.product-offer .main .box .card {
-  flex: 0 0 auto;
-  width: 400px;
-  height: 620px;
+
+.product-offer .main .card {
   transition: 0.3s;
 }
-.product-offer .main .box .card:hover {
+.product-offer .main .card:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.product-offer .main .box .card .card-img-top {
+.product-offer .main .card .card-img-top {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-  height: 450px;
 }
-.product-offer .main .box .card .card-img-top img {
+.product-offer .main .card .card-img-top img {
   width: 100%;
   height: 100%;
   transition: 0.3s;
   cursor: pointer;
 }
-.product-offer .main .box .card .card-img-top .icons {
+.product-offer .main .card .card-img-top .icons {
   position: absolute;
   bottom: 10%;
   opacity: 0;
   right: 0%;
   transition: 0.3s;
 }
-.product-offer .main .box .card:hover .card-img-top .icons {
+.product-offer .main .card:hover .card-img-top .icons {
   opacity: 1;
   right: 8%;
 }
-.product-offer .main .box .card .card-img-top .icons div {
+.product-offer .main .card .card-img-top .icons div {
   border: 1px solid #bfbfbf;
   padding: 10px 10px;
   background-color: white;
   transition: 0.3s;
 }
-.product-offer .main .box .card .card-img-top .icons div:hover {
+.product-offer .main .box .card-img-top .icons div:hover {
   background-color: #0989ff;
   color: white;
   cursor: pointer;
 }
-.product-offer .main .box .card:hover .card-img-top img {
+.product-offer .main .card:hover .card-img-top img {
   transform: scale(1.2);
 }
-.product-offer .main .box .card .card-body .txt {
+.product-offer .main .card .card-body .txt {
   font-size: 12px;
   margin-bottom: 5px;
 }
-.product-offer .main .box .card .card-body h5 {
+.product-offer .main .card .card-body h5 {
   font-size: 20px;
   font-weight: bold;
   color: #010f1c;
 }
-.product-offer .main .box .card .card-body .card-text {
+.product-offer .main .card .card-body .card-text {
   color: #0989ff;
   font-weight: bold;
 }
-.product-offer .main .box .card .card-body .card-text span {
+.product-offer .main .card .card-body .card-text span {
   font-size: 10px;
   color: #55585b;
 }
-.product-offer .main .box .card .card-body .stars i {
+.product-offer .main .card .card-body .stars i {
   color: #f1c40f;
   font-size: 11px;
+}
+.product-offer .main .card .card-body .days .box{
+   border: 1px solid #010f1c45;
+   border-radius: 5px;
+   margin-right: 5px;
+   padding: 5px 10px;
+   font-size: 18px;
+   font-weight: bold;
+}
+.product-offer .main .card .card-body .days .box p{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+.slick-prev, .slick-next, .slick-dots {
+  opacity: 0;
 }
 
 /* -----------------------------------------------------------------------------Shop Section-------------------------------------------------------------------- */
@@ -1208,43 +1212,64 @@ body {
   position: relative;
   overflow: hidden;
 }
-.blog .main .box {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-.blog .main .box::-webkit-scrollbar {
-  display: none;
-}
-.blog .main .box .card {
-  flex: 0 0 auto;
-  width: 400px;
-  height: 450px;
+.blog .main .card {
   transition: 0.3s;
   border: none;
 }
-.blog .main .box .card .card-img-top {
+.blog .main .card .card-img-top {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 }
-.blog .main .box .card .card-img-top img {
+.blog .main .card .card-img-top .box{
+  position: absolute;
+  background-color: #010f1c;
+  color: white;
+  padding: 8px 20px;
+}
+.blog .main .card .card-img-top img {
   width: 100%;
+  height: 100%;
   transition: 0.3s;
   cursor: pointer;
   border-radius: 10px;
 }
-.blog .main .box .card .card-body h5 {
+.blog .main .card .card-body h5 {
   font-size: 15px;
   font-weight: bold;
   color: #010f1c;
   margin: 0;
+  transition: .3s;
 }
-
-.blog .main .box .card .card-body .card-text {
+.blog .main .card .card-body p{
+  transition: .3s;
+}
+.blog .main .card .card-body p i{
+  color: #0989ff;
+}
+.blog .main .card .card-body h5:hover{
+  color: #0989ff;
+  cursor: pointer;
+}
+.blog .main .card .card-body p:hover{
+  color: #0989ff;
+  cursor: pointer;
+}
+.blog .main .card .card-body .card-text {
   font-size: 12px;
+  transition: .3s;
 }
-.blog .main .box .card .card-body .btn {
+.blog .main .card .card-body .card-text:hover{
+  color: #55585b;
+}
+.blog .main .card .card-body .btn {
   padding: 0;
+  transition: .3s;
+  border: 1px solid #bfbfbf;
+  padding: 5px 10px;
+}
+.blog .main .card .card-body .btn:hover{
+  background-color: #0989ff;
+  color: white;
 }
 
 /* ------------------------------------------------------------------------Social media Section------------------------------------------------------------------ */
@@ -1423,7 +1448,7 @@ footer .bottom .img img {
   .product-offer .head .btn::before {
     width: 370px;
   }
-  .product-offer .main .box .card {
+  .product-offer .main .card {
     width: 430px;
   }
   /* Shop */
@@ -1539,7 +1564,7 @@ footer .bottom .img img {
     display: block;
   }
   /* Product Offer */
-  .product-offer .main .box .card {
+  .product-offer .main .card {
     width: 480px;
   }
 }
@@ -1585,16 +1610,15 @@ footer .bottom .img img {
 }
 @media (max-width: 500px) {
   /* Product Offer */
-  .product-offer .main .box .card {
+  .product-offer .main .card {
     width: 400px;
   }
   /* Blog */
 }
 @media (max-width: 420px) {
   /* Product Offer */
-  .product-offer .main .box .card {
+  .product-offer .main .card {
     width: 300px;
-    height: 490px;
   }
 }
 @media (max-width: 370px) {
@@ -1609,9 +1633,8 @@ footer .bottom .img img {
 }
 @media (max-width: 320px) {
   /* Product Offer */
-  .product-offer .main .box .card {
+  .product-offer .main .card {
     width: 250px;
-    height: 430px;
   }
   /* Blog */
   .blog .main .box .card {

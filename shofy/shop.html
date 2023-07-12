@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
   </head>
   <body>
     <div class="notifications d-flex justify-content-center"></div>
@@ -323,23 +324,9 @@
             <div class="price">
               <h5>Price Filter</h5>
               <div class="range-input">
-                <div class="slider"></div>
-                <input
-                  type="range"
-                  id="min-value"
-                  min="0"
-                  max="1200"
-                  value="0"
-                />
-                <input
-                  type="range"
-                  id="max-value"
-                  min="0"
-                  max="1200"
-                  value="1200"
-                />
+                <input type="text" id="rangeSlider">
+                
               </div>
-              $<span id="min"></span> - $<span id="max"></span>
             </div>
             <div class="status py-3">
               <h5>Product Status</h5>
@@ -652,5 +639,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
   </body>
 </html>

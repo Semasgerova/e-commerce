@@ -19,6 +19,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
      <div class="notifications d-flex justify-content-center"></div>
@@ -415,7 +417,7 @@
                <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 d-flex align-items-center">
-                        <div class="txt">
+                        <div class="txt" data-aos="fade-down">
                             <p>Starting at <b>$Starting at</b></p>
                             <h3>The best tablet Collection 2023</h3>
                             <p class="text">Exclusive offer <span>35</span> off this week</p>
@@ -424,7 +426,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 "> 
                         <div class="img w-100 h-100 d-flex justify-content-end">
-                            <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-img-1.558c04de.png&w=640&q=75">
+                            <img data-aos="fade-down" src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider-img-1.558c04de.png&w=640&q=75">
                         </div>
                     </div>
                 </div>
@@ -596,7 +598,7 @@
     <section class="products">
       <div class="container py-5">
         <div class="box">
-          <div class="text py-3"><h1>Trending Products</h1></div>
+          <div class="text py-3" data-aos="fade-up"><h1>Trending Products</h1></div>
           <ul class="nav nav-pills d-flex align-items-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="pills-new-tab" data-bs-toggle="pill" data-bs-target="#pills-new" type="button" role="tab" aria-controls="pills-new" aria-selected="true">New</button>
@@ -656,8 +658,92 @@
           <button class="btn btn-primary">View All Deals <i class="fa-solid fa-arrow-right-long"></i></button>
         </div>
         <div class="main py-5">
-           <div class="box">
-           
+          <div id="lazy" class="slick">
+            <div class="card me-2" >
+              <div class="card-img-top">
+                 <img  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fn1YRvWJ%2Fheadphone-5.png&w=1920&q=75">
+                 <div class="icons">
+                 <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                 <div class="eye"> <i class="fa-regular fa-eye"></i></div>
+                 <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+               </div>
+              </div>
+                 <div class="card-body">
+                 <p class="txt">Headphones</p>
+                   <h5 class="card-title">Gaming Headphone</h5>
+                   <div class="stars">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                </div>
+                   <p class="card-text"><span>$<del>$130</del></span> $123.50</p>
+                   <div class="days d-flex">
+                    <div class="box day d-flex flex-column align-items-center">34 <p>day</p></div>
+                    <div class="box hrs d-flex flex-column align-items-center">5 <p>hrs</p></div>
+                    <div class="box min d-flex flex-column align-items-center">54 <p>min</p></div>
+                    <div class="box sec d-flex flex-column align-items-center">40 <p>sec</p></div>
+                   </div>
+                 </div>
+            </div>
+            <div class="card me-2" >
+                <div class="card-img-top">
+                   <img  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FfvXHr2Y%2Fblutooth-1.png&w=1920&q=75">
+                   <div class="icons">
+                   <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                   <div class="eye"> <i class="fa-regular fa-eye"></i></div>
+                   <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+                 </div>
+                </div>
+                   <div class="card-body">
+                   <p class="txt">Bluetooth</p>
+                     <h5 class="card-title">Lenovo Sports Bluetooth</h5>
+                     <div class="stars">
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                     <i class="fa-solid fa-star"></i>
+                  </div>
+                     <p class="card-text"><span>$<del>$70</del></span> $66.50</p>
+                     <div class="days d-flex">
+                      <div class="box day d-flex flex-column align-items-center">3 <p>day</p></div>
+                      <div class="box hrs d-flex flex-column align-items-center">11 <p>hrs</p></div>
+                      <div class="box min d-flex flex-column align-items-center">24 <p>min</p></div>
+                      <div class="box sec d-flex flex-column align-items-center">4 <p>sec</p></div>
+                     </div>
+                   </div>
+            </div>
+            <div class="card" >
+              <div class="card-img-top">
+                 <img  src="https://shofy-client.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fj4sDV3Q%2Fwatch-5.png&w=1920&q=75">
+                 <div class="icons">
+                 <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                 <div class="eye"> <i class="fa-regular fa-eye"></i></div>
+                 <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+               </div>
+              </div>
+                 <div class="card-body">
+                 <p class="txt">Smart Watch</p>
+                   <h5 class="card-title">Sony Smart Watch</h5>
+                   <div class="stars">
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                   <i class="fa-solid fa-star"></i>
+                </div>
+                   <p class="card-text"><span>$<del>$200</del></span> $190.00</p>
+                   <div class="days d-flex">
+                    <div class="box day d-flex flex-column align-items-center">50 <p>day</p></div>
+                    <div class="box hrs d-flex flex-column align-items-center">10 <p>hrs</p></div>
+                    <div class="box min d-flex flex-column align-items-center">44 <p>min</p></div>
+                    <div class="box sec d-flex flex-column align-items-center">10 <p>sec</p></div>
+                   </div>
+                 </div>
+          </div>
+             </div>
            </div>
         </div>
        </div>
@@ -962,41 +1048,44 @@
 
     <section class="blog">
       <div class="container">
-       <div class="head py-5">
+       <div class="head py-3">
          <h1>Latest news & articles</h1>
          <button class="btn btn-primary">View All Blog <i class="fa-solid fa-arrow-right-long"></i></button>
        </div>
-       <div class="main pt-5">
-        <div class="box">
-         <div class="card" >
+       <div class="main pt-2">
+        <div id="responsive" class="slick">
+         <div class="card me-2" >
            <div class="card-img-top">
+            <div class="box">14 January, 2023</div>
              <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-1.bccc486c.jpg&w=384&q=75">
            </div>
            <div class="card-body px-0">
              <h5 class="card-title">The Modern Art Clay Ceramics.</h5>
-             <p>Tablet, Tablet,</p>
+             <p><i class="fa-solid fa-tag""></i> Tablet, Tablet,</p>
              <p class="card-text">The world is an amazing place providing an incredible assortment of interesting locations across.</p>
              <div class="btn">Read more <i class="fa-solid fa-arrow-right-long"></i></div>
            </div>
          </div>
-         <div class="card mx-5" >
+         <div class="card me-2" >
           <div class="card-img-top">
+            <div class="box">18 February, 2023</div>
             <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-2.bdd4e69e.jpg&w=384&q=75">
           </div>
           <div class="card-body px-0">
             <h5 class="card-title">The Modern Art Clay Ceramics.</h5>
-            <p>Tablet, Tablet,</p>
+            <p><i class="fa-solid fa-tag"></i> Tablet, Tablet,</p>
             <p class="card-text">The world is an amazing place providing an incredible assortment of interesting locations across.</p>
             <div class="btn">Read more <i class="fa-solid fa-arrow-right-long"></i></div>
           </div>
         </div>
          <div class="card" >
           <div class="card-img-top">
+            <div class="box">20 January, 2023</div>
             <img src="https://shofy-client.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblog-3.48d35a5a.jpg&w=384&q=75">
           </div>
           <div class="card-body px-0">
             <h5 class="card-title">The Modern Art Clay Ceramics.</h5>
-            <p>Tablet, Tablet,</p>
+            <p><i class="fa-solid fa-tag"></i> Tablet, Tablet,</p>
             <p class="card-text">The world is an amazing place providing an incredible assortment of interesting locations across.</p>
             <div class="btn">Read more <i class="fa-solid fa-arrow-right-long"></i></div>
           </div>
@@ -1141,5 +1230,11 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

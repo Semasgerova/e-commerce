@@ -9,12 +9,12 @@ const createToast = () => {
   toast.className =
     "notification d-flex align-items-center justify-content-around";
   toast.innerHTML = `
-<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> Added to cart</h6>
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> 1 product added to cart</h6>
 `;
   notifications.appendChild(toast);
   setTimeout(() => {
     toast.remove();
-  }, 2000);
+  }, 1000);
 };
 
 //Default Data
@@ -371,28 +371,31 @@ colThreeByThree.addEventListener("click", () => {
 });
 
 window.onload = function () {
-  //filter price 
-  var min = document.getElementById("min");
-  var max = document.getElementById("max");
-  var minValue = document.getElementById("min-value");
-  var maxValue = document.getElementById("max-value");
-
-  min.innerHTML = minValue.value;
-  max.innerHTML = maxValue.value;
-
-  minValue.oninput = function () {
-    min.innerHTML = this.value;
+  //ionRangeSlider
+  $(document).ready(function () {
+    $("#rangeSlider").ionRangeSlider({
+      type: "double",
+      min: 0,
+      max: 1199,
+      from: 0,
+      to: 1100,
+      prefix: "$",
+    });
+  });
+  $("#rangeSlider").on("change", function () {
     filterData();
-  };
-
-  maxValue.oninput = function () {
-    max.innerHTML = this.value;
-    filterData();
-  };
-
+  });
   function filterData() {
+    var minCapacity = $("#rangeSlider").data().from;
+    var maxCapacity = $("#rangeSlider").data().to;
+    
     var filteredData = shopData.filter(
-      (value) => value.price >= minValue.value && value.price <= maxValue.value
+      (value) => value.capacity >= minCapacity && value.capacity <= maxCapacity
+    );
+    var filteredData = shopData.filter(
+      (value) =>
+        value.price >= $("#rangeSlider").data().from &&
+        value.price <= $("#rangeSlider").data().to
     );
     const row = document.querySelector(".products .bottom .row");
     let card = "";
@@ -825,10 +828,8 @@ window.onload = function () {
   });
 };
 
-
 //reset filter
 var reset = document.querySelector(".products .reset .btn");
 reset.addEventListener("click", () => {
   window.location.reload();
 });
-

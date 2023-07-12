@@ -81,12 +81,12 @@ const createToast = () => {
   toast.className =
     "notification d-flex align-items-center justify-content-around";
   toast.innerHTML = `
-<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> Added to cart</h6>
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> ${count.innerHTML} product added to cart</h6>
 `;
   notifications.appendChild(toast);
   setTimeout(() => {
     toast.remove();
-  }, 2000);
+  }, 1000);
 };
 
 const add = document.querySelector(".product .top .addCart .add");
@@ -94,7 +94,7 @@ add.addEventListener("click", () => {
   localStorage.setItem("cartCount", parseInt(productCount));
   setTimeout(() => {
     window.location.reload();
-  }, 2000);
+  }, 1000);
 
   createToast();
 });
@@ -103,6 +103,19 @@ localStorage.setItem("cartCount", parseInt(productCount));
 document.getElementById("productCount").innerText = productCount;
 document.getElementById("count").innerText = productCount;
 
+const createToastProduct = () => {
+  const toast = document.createElement("div");
+  toast.className =
+    "notification d-flex align-items-center justify-content-around";
+  toast.innerHTML = `
+<h6 class="m-0"><i class="fa-solid fa-circle-check"></i> 1 product added to cart</h6>
+`;
+  notifications.appendChild(toast);
+  setTimeout(() => {
+    toast.remove();
+  }, 1000);
+};
+
 const cart = document.querySelector("#cart");
 cart.addEventListener("click", () => {
   localStorage.setItem("cartCount", parseInt(productCount) + 1);
@@ -110,6 +123,6 @@ cart.addEventListener("click", () => {
   document.getElementById("count").innerText = productCount;
   setTimeout(() => {
     window.location.reload();
-  }, 2000);
-  createToast();
+  }, 1000);
+  createToastProduct();
 });

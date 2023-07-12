@@ -32,7 +32,7 @@ body {
   bottom: 0px;
   left: 0;
   background-color: greenyellow;
-  animation: progress 2s linear forwards;
+  animation: progress 1s linear forwards;
 }
 @keyframes progress {
   100% {
@@ -488,63 +488,30 @@ body {
   color: #f1c40f;
   font-size: 11px;
 }
-.products .price .range-input {
-  padding: 30px 0px 20px 0px;
-  position: relative;
-}
-.products .price .range-input input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 90%;
+.products .price .range-input .irs--flat .irs-line{
   height: 5px;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  outline: none;
+  border-radius: 0px;
 }
-.products .price .range-input .slider {
-  position: absolute;
-  bottom: 22%;
-  width: 90%;
-  height: 4px;
-  background-color: #deedf7;
+.products .price .range-input .irs--flat .irs-bar {
+    top: 25px;
+    height: 5px;
+    background-color: #0989ff;
 }
-.products .price .range-input input:nth-child(2) {
-  left: 0%;
+
+.products .price .range-input .irs--flat .irs-handle>i:first-child{
+  background-color: #0989ff;
 }
-.products
-  .price
-  .range-input
-  input[type="range"]::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  height: 5px;
+.products .price .range-input .irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before{
+  border-top-color: #0989ff;
 }
-.products .price .range-input input[type="range"]::-moz-range-track {
-  -webkit-appearance: none;
-  height: 5px;
+.products .price .range-input .irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+  background-color: #0989ff;
 }
-.products .price .range-input input[type="range"]::-ms-track {
-  appearance: none;
-  height: 5px;
+.products .price .range-input .irs--flat .irs-to:before{
+  border-top-color: #0989ff;
 }
-.products .price .range-input input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #0070bf;
-  height: 15px;
-  width: 5px;
-  cursor: pointer;
-  z-index: 1111;
-}
-.products .price .range-input input::-moz-range-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #0070bf;
-  height: 15px;
-  width: 5px;
-  cursor: pointer;
+.products .price .range-input .irs--flat .irs-to{
+  background-color: #0989ff;
 }
 .products .status h5 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
