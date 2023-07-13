@@ -388,47 +388,71 @@ body {
 /*----------------------------------------------------------- footer ----------------------------------------------------------------*/
 
 footer {
-    background-color: #f4f7f9;
-  }
-  footer .top {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.162);
-  }
-  footer .top .box p {
-    margin-top: 10px;
-    width: 95%;
-    color: #010f1c;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  footer .top .box .icons i {
-    padding: 10px 10px;
-    background-color: white;
-    border-radius: 10px;
-    color: #55585b;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  footer .top h3 {
-    color: #010f1c;
-    font-size: 20px;
-  }
-  footer .top ul li {
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  footer .top h5 {
-    color: #010f1c;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  footer .bottom p {
-    color: #55585b;
-  }
-  footer .bottom p span {
-    color: #0989ff;
-  }
-  footer .bottom .img img {
-    width: 40%;
-  }
+  background-color: #f4f7f9;
+}
+footer .top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.162);
+}
+footer .top .box p {
+  margin-top: 10px;
+  width: 95%;
+  color: #010f1c;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .top .box .icons i {
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  color: #55585b;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+footer .top .box .icons i:hover{
+  background-color: #0989ff;
+  color: white;
+}
+footer .top h3 {
+  color: #010f1c;
+  font-size: 20px;
+}
+footer .top ul li {
+  font-size: 14px;
+  margin-top: 8px;
+  transition: .3s;
+  cursor: pointer;
+}
+footer .top ul li:hover{
+  color: #0989ff;
+}
+footer .top h5 {
+  color: #010f1c;
+  font-size: 22px;
+  font-weight: bold;
+  transition: .3s;
+  cursor: pointer;
+}
+footer .top h5:hover{
+  color: #0989ff;
+}
+footer .top .txt{
+  cursor: pointer;
+  transition: .3s;
+}
+footer .top .txt:hover{
+  color: #0989ff;
+}
+footer .bottom p {
+  color: #55585b;
+}
+footer .bottom p span {
+  color: #0989ff;
+}
+footer .bottom .img img {
+  width: 40%;
+}
+
 
 
 /*-------------------------------------------------- Media -----------------------------------------------------------*/

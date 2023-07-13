@@ -1,7 +1,24 @@
-import {data} from "../data/data.js";
+import {shopData} from "../data/data.js";
 
 //Aos
 AOS.init();
+
+$('.slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+  // adaptiveHeight: true,
+  arrows: true,
+  prevArrow: "<button type='button' class='slick-prev'><i class='fa-solid fa-chevron-left'></i></button>",
+  nextArrow: "<button type='button' class='slick-next'><i class='fa-solid fa-chevron-right'></i></button>",
+  customPaging : function(slider, i) {
+    return '<div class="box"></div>';
+},
+});
+
+
 // Products
 
 const rowNew = document.querySelector('.products .tab-content .tab-pane .new');
@@ -9,7 +26,7 @@ const rowFeatured = document.querySelector('.products .tab-content .tab-pane .fe
 const rowSeller = document.querySelector('.products .tab-content .tab-pane .topSeller');
 
 let newCard = '';
-data.slice(0,8).map(item=>(
+shopData.slice(0,8).map(item=>(
     newCard += `  
         <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
@@ -25,11 +42,7 @@ data.slice(0,8).map(item=>(
               <p class="txt">${item.category}</p>
               <h5 class="card-title">${item.title}</h5>
               <div class="stars">
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
+                ${item.star}
               </div>
               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
             </div>
@@ -40,7 +53,7 @@ data.slice(0,8).map(item=>(
 rowNew.innerHTML = newCard;
 
 let featuredCard = '';
-data.slice(8,12).map(item=>(
+shopData.slice(8,12).map(item=>(
     featuredCard += `  
         <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
@@ -56,11 +69,7 @@ data.slice(8,12).map(item=>(
               <p class="txt">${item.category}</p>
               <h5 class="card-title">${item.title}</h5>
               <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              ${item.star}
            </div>
               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
             </div>
@@ -71,7 +80,7 @@ data.slice(8,12).map(item=>(
 rowFeatured.innerHTML = featuredCard;
 
 let sellerCard = '';
-data.slice(12,20).map(item=>(
+shopData.slice(2,10).map(item=>(
     sellerCard += `  
         <div class="col-sm-12 col-md-6 col-lg-3">
          <div class="card" >
@@ -87,11 +96,7 @@ data.slice(12,20).map(item=>(
             <p class="txt">${item.category}</p>
               <h5 class="card-title">${item.title}</h5>
               <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              ${item.star}
            </div>
               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
             </div>
@@ -169,36 +174,6 @@ $(document).ready(function(){
   });
   });
 
-// const offerProduct = document.querySelector('.product-offer .main .box');
-// let offerCard = '';
-// data.slice(0,3).map(item=>(
-//   offerCard += `  
-//          <div class="card me-2" >
-//          <div class="card-img-top">
-//             <img  src="${item.image}">
-//             <div class="icons">
-//             <div class="cart" id="cart"><i class="fa-solid fa-cart-shopping"></i></div>
-//             <div class="eye"> <i class="fa-regular fa-eye"></i></div>
-//             <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-//           </div>
-//          </div>
-//             <div class="card-body">
-//             <p class="txt">${item.category}</p>
-//               <h5 class="card-title">${item.title}</h5>
-//               <div class="stars">
-//               <i class="fa-solid fa-star"></i>
-//               <i class="fa-solid fa-star"></i>
-//               <i class="fa-solid fa-star"></i>
-//               <i class="fa-solid fa-star"></i>
-//               <i class="fa-solid fa-star"></i>
-//            </div>
-//               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
-//             </div>
-//           </div>
-       
-//     `
-// ));
-// offerProduct.innerHTML = offerCard;
 
 // New Arrival
 const scrollBoxes = document.querySelectorAll('.arrivals .main .box');
@@ -207,7 +182,7 @@ const nextButtons = document.querySelectorAll('.arrivals .head .buttons .next');
 
 const boxArrival = document.querySelector('.arrivals .main .box');
 let boxCard = '';
-data.slice(0,8).map(item=>(
+shopData.slice(0,8).map(item=>(
     boxCard += `  
          <div class="card" >
          <div class="card-img-top">
@@ -222,11 +197,7 @@ data.slice(0,8).map(item=>(
             <p class="txt">${item.category}</p>
               <h5 class="card-title">${item.title}</h5>
               <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              ${item.star}
            </div>
               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
             </div>
@@ -240,7 +211,7 @@ boxArrival.innerHTML = boxCard;
 
 const rowShop = document.querySelector('.shop .box .row');
 let shopCard = '';
-data.slice(12,18).map(item=>(
+shopData.slice(2,8).map(item=>(
   shopCard += `  
         <div class="col-sm-12 col-md-6 col-lg-4">
          <div class="card" >
@@ -256,11 +227,7 @@ data.slice(12,18).map(item=>(
               <p class="txt">${item.category}</p>
               <h5 class="card-title">${item.title}</h5>
               <div class="stars">
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
-                 <i class="fa-solid fa-star"></i>
+              ${item.star}
               </div>
               <p class="card-text"><span>$<del>${item.previousPrice}</del></span> $${item.price}</p>
             </div>
@@ -290,22 +257,22 @@ const cart = document.querySelector('.header .header-middle .box .carts .info .s
 const canvasCart = document.querySelector('.header .header-middle-canvas .menu .right .shopping-bag span');
 
 let cartCount = parseInt(localStorage.getItem('cartCount') || 0);
-cart.setAttribute('data-count', cartCount);
+cart.setAttribute('shopData-count', cartCount);
 cart.innerHTML = cartCount;
 
-canvasCart.setAttribute('data-count', cartCount);
+canvasCart.setAttribute('shopData-count', cartCount);
 canvasCart.innerHTML = cartCount;
 
 for (const button of buttons) {
 button.addEventListener("click", () => {
-var add = parseInt(cart.getAttribute('data-count') || 0);
+var add = parseInt(cart.getAttribute('shopData-count') || 0);
 cartCount = add + 1;
-cart.setAttribute('data-count', cartCount);
+cart.setAttribute('shopData-count', cartCount);
 cart.innerHTML = cartCount;
 
-var addCanvas = parseInt(canvasCart.getAttribute('data-count') || 0);
+var addCanvas = parseInt(canvasCart.getAttribute('shopData-count') || 0);
 cartCount = addCanvas + 1;
-canvasCart.setAttribute('data-count', cartCount);
+canvasCart.setAttribute('shopData-count', cartCount);
 canvasCart.innerHTML = cartCount;
 
 localStorage.setItem('cartCount', cartCount);

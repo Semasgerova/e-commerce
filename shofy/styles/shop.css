@@ -429,7 +429,6 @@ body {
   color: #55585b;
 }
 .products .bottom .row .cards .card-body .stars i {
-  color: #f1c40f;
   font-size: 11px;
 }
 .products .bottom .row .card .card-img-top img {
@@ -656,6 +655,12 @@ footer .top .box .icons i {
   border-radius: 10px;
   color: #55585b;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+footer .top .box .icons i:hover{
+  background-color: #0989ff;
+  color: white;
 }
 footer .top h3 {
   color: #010f1c;
@@ -664,11 +669,28 @@ footer .top h3 {
 footer .top ul li {
   font-size: 14px;
   margin-top: 8px;
+  transition: .3s;
+  cursor: pointer;
+}
+footer .top ul li:hover{
+  color: #0989ff;
 }
 footer .top h5 {
   color: #010f1c;
   font-size: 22px;
   font-weight: bold;
+  transition: .3s;
+  cursor: pointer;
+}
+footer .top h5:hover{
+  color: #0989ff;
+}
+footer .top .txt{
+  cursor: pointer;
+  transition: .3s;
+}
+footer .top .txt:hover{
+  color: #0989ff;
 }
 footer .bottom p {
   color: #55585b;
